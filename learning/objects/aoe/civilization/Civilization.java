@@ -1,5 +1,7 @@
 package learning.objects.aoe.civilization;
 
+import learning.objects.aoe.civilization.Civilizations;
+
 
 
 public class Civilization
@@ -31,6 +33,7 @@ public class Civilization
         this.uniqueTechnology=uniqueTechnology;
     }
     
+    
     public String getArchitecture(){
         return architecture;
     }
@@ -45,5 +48,10 @@ public class Civilization
     
     public String getUniqueTechnology(){
         return uniqueTechnology;
+    }
+    
+    public Civilizations getCivilization()
+    {
+        return type;
     }
 }

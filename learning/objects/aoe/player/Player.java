@@ -1,15 +1,15 @@
 package learning.objects.aoe.player;
-import learning.objects.aoe.player.*;
+import learning.objects.aoe.civilization.*;
 
 
 public class Player
 {
     private String name;
-    private Civilization type;
+    private Civilization civilizationType;
     
     public Player(String name)
     {
-       this.name=name;
+        this.name=name;
     }
 
     public void setName(String Name)
@@ -17,8 +17,13 @@ public class Player
         this.name=name;
     }
     
-    public Civilization.setCivilization(Civilization type)
+    public void setCivilization(Civilization civilizationType)
     {
-        this.type=type;
+        this.civilizationType=civilizationType;
+    }
+    
+    public String getName()
+    {
+        return name;
     }
 }

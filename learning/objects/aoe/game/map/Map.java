@@ -1,35 +1,41 @@
 package learning.objects.aoe.game.map;
+import learning.objects.aoe.player.*;
+import learning.objects.aoe.civilization.*;
+import learning.objects.aoe.game.map.*;
 
-
-/**
- * Write a description of class Map here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Map
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Map
-     */
-    public Map()
+    private Size size;
+    private Type type;
+    private Player player;
+    
+    public Map(Size size,Type type)
     {
-        // initialise instance variables
-        x = 0;
+        this.size=size;
+        this.type=type;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    
+    public void addPlayer(Player player)
     {
-        // put your code here
-        return x + y;
+        this.player=player;
     }
+    
+    public Size getSize()
+    {
+        return size;
+    }
+    
+    public Type getType()
+    { 
+        return type;
+    }
+    
+    public void start()
+    {
+        System.out.println("cargando mapa "+ getSize() + "de tipo "+ getType()+"...listo");
+        System.out.println("cargando jugador"+ player.getName());
+    }
+    
+        
+    
 }
